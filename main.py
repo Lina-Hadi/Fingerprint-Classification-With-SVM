@@ -34,3 +34,11 @@ if uploaded_file is not None:
     st.line_chart(hist_values)
 else:
     st.info("👆 Please upload a fingerprint image to begin.")
+
+# Later in prediction
+proba = calibrated_svm.predict_proba(new_fingerprint)
+max_confidence = max(proba[0])
+if max_confidence < 0.7:
+    st.warning("Fingerprint not recognized.")
+else:
+    predicted_class = calibrated_svm.predict(new_fingerprint)
