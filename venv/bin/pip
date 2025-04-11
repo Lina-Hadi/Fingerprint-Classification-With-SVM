@@ -1,4 +1,6 @@
-#!/Users/Lynn/Biomertrie/venv/bin/python3
+#!/bin/sh
+'''exec' "/Users/Lynn/Documents/GitHub/Fingerprint Classification With SVM/venv/bin/python" "$0" "$@"
+' '''
 # -*- coding: utf-8 -*-
 import re
 import sys
