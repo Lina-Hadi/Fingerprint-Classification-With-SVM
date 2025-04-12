@@ -33,7 +33,7 @@ def main():
             pred_label = np.argmax(proba)
             
             # Authorization logic
-            if confidence > 0.6:  # Higher threshold
+            if confidence > 0.4:  # Higher threshold
                 user_id = le.inverse_transform([pred_label])[0]
                 st.success(f"✅ Authorized: User **{user_id}**")
                 st.write(f"Confidence: {confidence:.2f}")
